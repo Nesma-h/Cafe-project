@@ -36,7 +36,6 @@ document.querySelector('.about .logo').addEventListener("wheel", function(e) {
     // menue
 
     $('.menucard').even().addClass('not-active')
-
     $('.menucards').slideUp(0)
     $('.one').addClass('menuLiActive')
     $('.menu-one').slideDown()
@@ -48,7 +47,7 @@ document.querySelector('.about .logo').addEventListener("wheel", function(e) {
     }
         // console.log($(this).attr('class'))
         $('.menucards').slideUp(200)
-        $(`.menu-${$(this).attr('class')}`).slideDown(1000)
+        $(`.menu-${$(this).attr('class').split(" ")[0]}`).slideDown(1000)
         $('.menu .logo li').removeClass('menuLiActive')
         $(this).addClass('menuLiActive')
     })

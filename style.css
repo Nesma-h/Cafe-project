@@ -379,6 +379,7 @@ width: 70%;
 .menucard.active{
     background-color:#366b5b;
 }
+
 .menu .details .menucards >p::after{
     content: '';
     width: 35px;
