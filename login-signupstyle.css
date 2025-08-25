@@ -1,0 +1,229 @@
+
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    transition: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('./fonts/Roboto/static/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: Playfair Display;
+    src: url(./fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+
+:root {
+    --background: #090a0a;
+    --secondFontColor: #5b5e5d;
+    --secondBackground: #366b5b;
+    --font-1: "roboto", Sans-Serif;
+    --font-2: "Playfair Display", Serif;
+    --font-mono: "Courier New", monospace;
+}
+body{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;*/
+    height: 100vh; 
+    background: linear-gradient( var(--background) ,var(--background) ,var(--background) , var(--secondBackground));
+}
+body.light{
+    background: linear-gradient( beige ,beige ,beige , var(--secondBackground));
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px ;
+    font-family: var(--font-1);
+    z-index: 100;
+    transition: 1s;
+    background-color: var(--background);
+}
+
+
+
+nav span {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+nav div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+nav div i{
+    cursor: pointer;
+    font-size: 20px;
+}
+nav div i.light{
+    color: var(--secondFontColor);
+}
+nav div i:hover{
+    color: var(--secondBackground);
+}
+nav div button ,
+form.login button{
+    padding: 15px 30px;
+    box-sizing: 20px;
+    background-color: #2a2c2ce4;
+    
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+}
+
+nav div button:hover,
+form.login button:hover {
+    background-color: var(--secondFontColor);
+    
+}
+
+nav div button:active {
+    transform: translateX(2px);
+    box-shadow: 2px 2px 15px var(--secondFontColor);
+}
+
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    border: 3px solid var(--secondBackground);
+    padding: 50px;
+    background-color:#07e8a515;
+    border-radius: 20px;
+    box-shadow: 3px 3px 15px var(--secondFontColor);
+    width: 25%;
+}
+form.light{
+    background-color:#07e8a515;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #090a0a;
+}
+form button,.signUp{
+    padding: 15px 30px;
+    box-sizing: 20px;
+    background-color: var(--secondBackground);
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+}
+form button .hover,.signUp:hover{
+    background-color: #48645c;
+}
+form button:active{
+    transform: translateX(2px);
+    box-shadow: 2px 2px 15px var(--secondFontColor);
+}
+form input:focus{
+    outline: 5px solid var(--secondBackground);
+}
+img{
+    position: absolute;
+    width: 25%;
+    bottom: 50%;
+    right: 50%;
+    z-index: -1;
+}
+form input.error:focus{
+    outline: red 3px solid;
+}
+form div span{
+    font-size: 12px;
+    color: red;
+}
+form input.correct:focus{
+    outline: green 4px solid;
+}
+form button.disable{
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #5b5e5d;
+}
+
+.alert{
+    border: green double 4px;
+    background-color: #090a0a;
+    color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    visibility: hidden;
+    opacity: 0;
+}
+.alert i{
+    font-size: 40px;
+    color: green;
+
+}
+.alert p{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.alert.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.alert.fail{
+    border: red double 4px;
+}
+.alert.fail i{
+    color: red;
+}
+@media (max-width:850px) {
+    form{
+        width: 50%;
+    }
+    
+}
+@media (max-width:450px) {
+    form{
+        width: 75%;
+    }
+    
+}
+@media (max-width:300px){
+    form{
+        width: 95%;
+    }
+    nav{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}

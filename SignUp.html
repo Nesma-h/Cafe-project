@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="login-signupstyle.css">
+    <link rel="stylesheet" href="./icons/fontawesome-free-6.7.2-web/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <span>SemOUE.</span>
+
+        <div>
+            <button class="logIn">Log-in</button>
+            <i class="fa-solid fa-moon" title="Dark/Light mode"></i>
+        </div>
+    </nav>
+    <form action="">
+        <div>
+
+            <div>
+                <input type="text" placeholder="UserName">
+                <span>you must enter unique user name and have only(characters - digits -underScore( _ ))</span>
+            </div>
+            <div>
+                <input type="email" placeholder="Email">
+                <span>Email is not correct </span>
+            </div>
+            <div>
+                <input type="password" placeholder="Password">
+                <span>Your Password must have at least one unique character (!/@#$%^&*-)</span>
+            </div>
+        </div>
+        <button class="disable">Sign-Up</button>
+    </form>
+
+    <div class="succes alert">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>Successefully Signed up</p>
+        <span>Go to login pagee</span>
+    </div>
+    <div class="fail alert">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <p>Email Already exists</p>
+    </div>
+    <img src="./imgs/intro-pic-primary2x.jpg" alt="">
+
+
+    <script src="./jquery.js"></script>
+    <script src="./signup.js"></script>
+</body>
+
+</html>
