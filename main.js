@@ -56,12 +56,11 @@ document.querySelector('.about .logo').addEventListener("wheel", function(e) {
     // gallary zoom photos
     let selectedIdx
     let divs=document.querySelectorAll('.gallary .gallary-photo > div')
-    $('.zoom-photo').hide(0)
     for(let i=0; i<divs.length; i++){
         divs[i].onclick=function(){
             let src=$(this).children('img').attr('src')
             $('.zoom-photo img').attr('src',src)
-            $('.zoom-photo').show(20)
+            $('.zoom-photo').addClass('show')
             // console.log(imgs[i].getAttribute('src'))
             selectedIdx = i
             updateButtons()
@@ -96,10 +95,10 @@ document.querySelector('.about .logo').addEventListener("wheel", function(e) {
     }
 
     $('.shadow').click(function(){
-        $('.zoom-photo').hide(50)
+        $('.zoom-photo').removeClass('show')
     })
     $('.fa-circle-xmark').click(function(){
-        $('.zoom-photo').hide(50)
+        $('.zoom-photo').removeClass('show')
     })
 
     //slider

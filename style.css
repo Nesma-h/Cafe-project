@@ -479,6 +479,12 @@ width: 70%;
     height: 100vh;
     width: 100%;
     z-index: 200;
+    visibility: hidden;
+    opacity: 0;
+}
+.zoom-photo.show{
+    visibility: visible;
+    opacity: 1;
 }
 .zoom-photo >i{
     position: fixed;

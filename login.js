@@ -10,7 +10,7 @@ $('nav div i').first().click(function(){
 $('.signUp').click(function(){
     window.location.href='signUp.html'
 })
-let info=JSON.parse(localStorage.getItem('info'))
+let info=(JSON.parse(localStorage.getItem('info')) || [])
 $('form').on('submit',function(e){
         e.preventDefault()
         if(info.find( a => a.username==$('input').eq(0).val())  && info.find( a => a.pass==$('input').eq(1).val()) ){
