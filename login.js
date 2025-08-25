@@ -8,7 +8,7 @@ $('nav div i').first().click(function(){
 })
 
 $('.signUp').click(function(){
-    window.location.href='signUp.html'
+    window.location.href='SignUp.html'
 })
 let info=(JSON.parse(localStorage.getItem('info')) || [])
 $('form').on('submit',function(e){

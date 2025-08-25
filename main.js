@@ -233,5 +233,5 @@ $('.logIn').click(function(){
     window.location.href='login.html'
 })
 $('.signUp').click(function(){
-    window.location.href='signUp.html'
+    window.location.href='SignUp.html'
 })
